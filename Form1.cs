@@ -13,9 +13,9 @@ namespace Lab2del2
     public partial class CalculatorForm : Form
     {
         string checkOperation="";
-        int firstNumber;
-        public int secondNumber;
-        public int result;
+        double firstNumber;
+        public double secondNumber;
+        public double result;
         public CalculatorForm()
         {
             InitializeComponent();
@@ -30,6 +30,9 @@ namespace Lab2del2
         * Om man tar typ endast "55=" ska detta resultera i 55
         * fixa clearBtn som egen operation?
         * help-knapp som egen operation?
+        * kör if(resultlabel.text.length-1 =="-") isyället för att ha contains för att kunna räkna
+        * med negativa tal........
+        * Fixa så att talet kan vara 0 och man fortfarande kan göra uträkningar
          */
 
         //Function that does all the calculations depending on which 
@@ -38,7 +41,11 @@ namespace Lab2del2
         {
             try
             {
-                secondNumber = int.Parse(TextBox.Text);
+                secondNumber = double.Parse(TextBox.Text);
+                if (ResultLabel.Text.Contains("-"))
+                {
+                    result = (firstNumber - secondNumber);
+                }
                 if (ResultLabel.Text.Contains("X"))
                 {
                     result = (firstNumber * secondNumber);
@@ -51,10 +58,6 @@ namespace Lab2del2
                         throw new Exception("Cannot divide by 0, please try again!");
                     }
                     result = (firstNumber / secondNumber);
-                }
-                if (ResultLabel.Text.Contains("-"))
-                {
-                    result = (firstNumber - secondNumber);
                 }
                 if (ResultLabel.Text.Contains("+"))
                 {
@@ -80,7 +83,7 @@ namespace Lab2del2
         private void ButtonOne_Click(object sender, EventArgs e)
         {
             var btnCheck = (Button)sender;
-            if (TextBox.Text == "0" && TextBox.Text != null)
+            if (TextBox.Text == "0" && TextBox.Text != null)//TextBox.Text == "0" && 
             {
                 TextBox.Text = btnCheck.Text;
                 ResultLabel.Text = btnCheck.Text;
@@ -106,12 +109,16 @@ namespace Lab2del2
                 }
                 else
                 {
-                    firstNumber = int.Parse(TextBox.Text);
+                    firstNumber = double.Parse(TextBox.Text);
                     ResultLabel.Text = $"{firstNumber.ToString()} {btnCheck.Text} ";
                 }
                 checkOperation = $"{btnCheck.Text}";
 
                 TextBox.Text = "";
+                if (result > double.MaxValue)
+                {
+                    throw new Exception("The result exceeded the maximum value, please try again");
+                }
                 if (checkOperation == "=")
                 {
                     ResultLabel.Text = result.ToString();
