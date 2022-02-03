@@ -16,6 +16,7 @@ namespace Lab2del2
         double firstNumber;
         public double secondNumber;
         public double result;
+        string resultHistory; //Variable that saves all calculations
         public CalculatorForm()
         {
             InitializeComponent();
@@ -23,16 +24,7 @@ namespace Lab2del2
         /*
          
          ----Att-Göra----
-        * Byt namn på alla knapper till typ btnClick så slipper man ha 10000funcktioner
-        * Samma för operations maybz
         * validering;:D;DD;D;
-        * Om nr överstiger max-int
-        * Om man tar typ endast "55=" ska detta resultera i 55
-        * fixa clearBtn som egen operation?
-        * help-knapp som egen operation?
-        * kör if(resultlabel.text.length-1 =="-") isyället för att ha contains för att kunna räkna
-        * med negativa tal........
-        * Fixa så att talet kan vara 0 och man fortfarande kan göra uträkningar
          */
 
         //Function that does all the calculations depending on which 
@@ -41,7 +33,8 @@ namespace Lab2del2
         {
             try
             {
-                secondNumber = double.Parse(TextBox.Text);
+                secondNumber = double.Parse(TextBox.Text); //Tries to parse the textbox text to a double
+                                                           //and store it in secondNumber
                 if (ResultLabel.Text.Contains("-"))
                 {
                     result = (firstNumber - secondNumber);
@@ -55,7 +48,7 @@ namespace Lab2del2
                     if (secondNumber == 0)
                     {
                         clearAll();
-                        throw new Exception("Cannot divide by 0, please try again!");
+                        throw new Exception("Cannot divide by 0, please try again!"); //Exception handling for /0
                     }
                     result = (firstNumber / secondNumber);
                 }
@@ -63,6 +56,7 @@ namespace Lab2del2
                 {
                     result = (firstNumber + secondNumber);
                 }
+                
             }
             catch(Exception e)
             {
@@ -82,18 +76,26 @@ namespace Lab2del2
         //Function that prints the number clicked onto the textbox and label.
         private void ButtonOne_Click(object sender, EventArgs e)
         {
-            var btnCheck = (Button)sender;
-            if (TextBox.Text == "0" && TextBox.Text != null)//TextBox.Text == "0" && 
+            try
             {
-                TextBox.Text = btnCheck.Text;
-                ResultLabel.Text = btnCheck.Text;
+                var btnCheck = (Button)sender; //btnCheck represents the clicked button
+                if (TextBox.Text == "0" && TextBox.Text != null)
+                {
+                    TextBox.Text = btnCheck.Text;
+                    ResultLabel.Text = btnCheck.Text;
+                }
+                else
+                {
+                    TextBox.Text += btnCheck.Text;
+                    ResultLabel.Text += btnCheck.Text;
+                }
+                resultHistory += " " + btnCheck.Text;
+                checkCalc();
             }
-            else
+            catch(Exception err)
             {
-                TextBox.Text += btnCheck.Text;
-                ResultLabel.Text += btnCheck.Text;
+                MessageBox.Show($"{err.Message}");
             }
-            checkCalc();
         }
 
         //Function that checks which operation is clicked
@@ -105,7 +107,7 @@ namespace Lab2del2
                 if (firstNumber != 0)
                 {
                     firstNumber = result;
-                    ResultLabel.Text = $"{result.ToString()} {btnCheck.Text} ";
+                    ResultLabel.Text = $"{result.ToString()} {btnCheck.Text} "; //Prints result and operation on the resultLabel
                 }
                 else
                 {
@@ -123,15 +125,23 @@ namespace Lab2del2
                 {
                     ResultLabel.Text = result.ToString();
                 }
+                resultHistory +=" "+ checkOperation;
             }
             catch(Exception err)
             {
                 MessageBox.Show($"Error:\n{err.Message}");
             }
         }
+        //If C is pressed...
         private void ButtonClear_Click(object sender, EventArgs e)
         {
             clearAll();
+        }
+
+        //Function that prints the calculation history when "history" is clicked
+        private void HistoryBtn_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show($"{resultHistory} = {result.ToString()}");
         }
     }
 }

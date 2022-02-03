@@ -47,6 +47,7 @@ namespace Lab2del2
             this.ButtonDiv = new System.Windows.Forms.Button();
             this.ResultLabel = new System.Windows.Forms.Label();
             this.TextBox = new System.Windows.Forms.TextBox();
+            this.HistoryBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // ButtonOne
@@ -59,7 +60,7 @@ namespace Lab2del2
             this.ButtonOne.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonOne.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonOne.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ButtonOne.Location = new System.Drawing.Point(14, 79);
+            this.ButtonOne.Location = new System.Drawing.Point(15, 79);
             this.ButtonOne.Name = "ButtonOne";
             this.ButtonOne.Size = new System.Drawing.Size(62, 53);
             this.ButtonOne.TabIndex = 1;
@@ -77,7 +78,7 @@ namespace Lab2del2
             this.ButtonThree.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonThree.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonThree.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ButtonThree.Location = new System.Drawing.Point(176, 79);
+            this.ButtonThree.Location = new System.Drawing.Point(177, 79);
             this.ButtonThree.Name = "ButtonThree";
             this.ButtonThree.Size = new System.Drawing.Size(62, 53);
             this.ButtonThree.TabIndex = 2;
@@ -95,7 +96,7 @@ namespace Lab2del2
             this.ButtonTwo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonTwo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonTwo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ButtonTwo.Location = new System.Drawing.Point(95, 79);
+            this.ButtonTwo.Location = new System.Drawing.Point(96, 79);
             this.ButtonTwo.Name = "ButtonTwo";
             this.ButtonTwo.Size = new System.Drawing.Size(62, 53);
             this.ButtonTwo.TabIndex = 3;
@@ -113,7 +114,7 @@ namespace Lab2del2
             this.ButtonAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonAdd.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ButtonAdd.Location = new System.Drawing.Point(257, 79);
+            this.ButtonAdd.Location = new System.Drawing.Point(258, 79);
             this.ButtonAdd.Name = "ButtonAdd";
             this.ButtonAdd.Size = new System.Drawing.Size(62, 53);
             this.ButtonAdd.TabIndex = 4;
@@ -131,7 +132,7 @@ namespace Lab2del2
             this.ButtonFour.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonFour.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonFour.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ButtonFour.Location = new System.Drawing.Point(14, 138);
+            this.ButtonFour.Location = new System.Drawing.Point(15, 138);
             this.ButtonFour.Name = "ButtonFour";
             this.ButtonFour.Size = new System.Drawing.Size(62, 53);
             this.ButtonFour.TabIndex = 5;
@@ -149,7 +150,7 @@ namespace Lab2del2
             this.ButtonFive.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonFive.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonFive.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ButtonFive.Location = new System.Drawing.Point(95, 138);
+            this.ButtonFive.Location = new System.Drawing.Point(96, 138);
             this.ButtonFive.Name = "ButtonFive";
             this.ButtonFive.Size = new System.Drawing.Size(62, 53);
             this.ButtonFive.TabIndex = 6;
@@ -167,7 +168,7 @@ namespace Lab2del2
             this.ButtonSix.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonSix.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonSix.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ButtonSix.Location = new System.Drawing.Point(176, 138);
+            this.ButtonSix.Location = new System.Drawing.Point(177, 138);
             this.ButtonSix.Name = "ButtonSix";
             this.ButtonSix.Size = new System.Drawing.Size(62, 53);
             this.ButtonSix.TabIndex = 7;
@@ -185,7 +186,7 @@ namespace Lab2del2
             this.ButtonSub.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonSub.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonSub.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ButtonSub.Location = new System.Drawing.Point(257, 138);
+            this.ButtonSub.Location = new System.Drawing.Point(258, 138);
             this.ButtonSub.Name = "ButtonSub";
             this.ButtonSub.Size = new System.Drawing.Size(62, 53);
             this.ButtonSub.TabIndex = 8;
@@ -203,7 +204,7 @@ namespace Lab2del2
             this.ButtonSeven.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonSeven.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonSeven.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ButtonSeven.Location = new System.Drawing.Point(14, 197);
+            this.ButtonSeven.Location = new System.Drawing.Point(15, 197);
             this.ButtonSeven.Name = "ButtonSeven";
             this.ButtonSeven.Size = new System.Drawing.Size(62, 53);
             this.ButtonSeven.TabIndex = 9;
@@ -221,7 +222,7 @@ namespace Lab2del2
             this.ButtonEight.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonEight.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonEight.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ButtonEight.Location = new System.Drawing.Point(95, 197);
+            this.ButtonEight.Location = new System.Drawing.Point(96, 197);
             this.ButtonEight.Name = "ButtonEight";
             this.ButtonEight.Size = new System.Drawing.Size(62, 53);
             this.ButtonEight.TabIndex = 10;
@@ -239,7 +240,7 @@ namespace Lab2del2
             this.ButtonNine.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonNine.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonNine.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ButtonNine.Location = new System.Drawing.Point(176, 197);
+            this.ButtonNine.Location = new System.Drawing.Point(177, 197);
             this.ButtonNine.Name = "ButtonNine";
             this.ButtonNine.Size = new System.Drawing.Size(62, 53);
             this.ButtonNine.TabIndex = 11;
@@ -257,7 +258,7 @@ namespace Lab2del2
             this.ButtonTimes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonTimes.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonTimes.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ButtonTimes.Location = new System.Drawing.Point(257, 197);
+            this.ButtonTimes.Location = new System.Drawing.Point(258, 197);
             this.ButtonTimes.Name = "ButtonTimes";
             this.ButtonTimes.Size = new System.Drawing.Size(62, 53);
             this.ButtonTimes.TabIndex = 12;
@@ -275,7 +276,7 @@ namespace Lab2del2
             this.ButtonClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonClear.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ButtonClear.Location = new System.Drawing.Point(14, 256);
+            this.ButtonClear.Location = new System.Drawing.Point(15, 256);
             this.ButtonClear.Name = "ButtonClear";
             this.ButtonClear.Size = new System.Drawing.Size(62, 53);
             this.ButtonClear.TabIndex = 13;
@@ -293,7 +294,7 @@ namespace Lab2del2
             this.ButtonZero.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonZero.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonZero.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ButtonZero.Location = new System.Drawing.Point(95, 256);
+            this.ButtonZero.Location = new System.Drawing.Point(96, 256);
             this.ButtonZero.Name = "ButtonZero";
             this.ButtonZero.Size = new System.Drawing.Size(62, 53);
             this.ButtonZero.TabIndex = 14;
@@ -311,7 +312,7 @@ namespace Lab2del2
             this.ButtonEquals.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonEquals.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonEquals.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ButtonEquals.Location = new System.Drawing.Point(176, 256);
+            this.ButtonEquals.Location = new System.Drawing.Point(177, 256);
             this.ButtonEquals.Name = "ButtonEquals";
             this.ButtonEquals.Size = new System.Drawing.Size(62, 53);
             this.ButtonEquals.TabIndex = 15;
@@ -329,7 +330,7 @@ namespace Lab2del2
             this.ButtonDiv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonDiv.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonDiv.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ButtonDiv.Location = new System.Drawing.Point(257, 256);
+            this.ButtonDiv.Location = new System.Drawing.Point(258, 256);
             this.ButtonDiv.Name = "ButtonDiv";
             this.ButtonDiv.Size = new System.Drawing.Size(62, 53);
             this.ButtonDiv.TabIndex = 16;
@@ -350,17 +351,32 @@ namespace Lab2del2
             // 
             this.TextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TextBox.Location = new System.Drawing.Point(17, 12);
+            this.TextBox.Location = new System.Drawing.Point(18, 12);
             this.TextBox.Name = "TextBox";
             this.TextBox.Size = new System.Drawing.Size(302, 30);
             this.TextBox.TabIndex = 0;
+            // 
+            // HistoryBtn
+            // 
+            this.HistoryBtn.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.HistoryBtn.FlatAppearance.BorderSize = 0;
+            this.HistoryBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.HistoryBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.HistoryBtn.Location = new System.Drawing.Point(245, 315);
+            this.HistoryBtn.Name = "HistoryBtn";
+            this.HistoryBtn.Size = new System.Drawing.Size(75, 23);
+            this.HistoryBtn.TabIndex = 18;
+            this.HistoryBtn.Text = "History";
+            this.HistoryBtn.UseVisualStyleBackColor = false;
+            this.HistoryBtn.Click += new System.EventHandler(this.HistoryBtn_Click);
             // 
             // CalculatorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(333, 342);
+            this.ClientSize = new System.Drawing.Size(334, 342);
+            this.Controls.Add(this.HistoryBtn);
             this.Controls.Add(this.ResultLabel);
             this.Controls.Add(this.ButtonDiv);
             this.Controls.Add(this.ButtonEquals);
@@ -406,6 +422,7 @@ namespace Lab2del2
         private System.Windows.Forms.Button ButtonDiv;
         private System.Windows.Forms.Label ResultLabel;
         private System.Windows.Forms.TextBox TextBox;
+        private System.Windows.Forms.Button HistoryBtn;
     }
 }
 
